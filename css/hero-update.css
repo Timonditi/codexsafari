@@ -1,0 +1,185 @@
+/* 
+   BitSafariX Hero Section Update - Remove Image
+   Enhancing visual layout without the image
+*/
+
+/* Update hero container for full-width content */
+.hero .container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Expand hero content to full width */
+.hero-content {
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Remove hero split layout */
+.hero-split {
+    display: block;
+    width: 100%;
+}
+
+/* Hide image container and diagonal */
+.hero-image-container,
+.hero-diagonal {
+    display: none;
+}
+
+/* Enhance network visual to be more prominent */
+.network-visual-enhanced {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    z-index: 0;
+    opacity: 0.7;
+}
+
+/* Enhance floating shapes for better visual interest */
+.floating-shapes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.shape {
+    position: absolute;
+    background-color: rgba(59, 138, 196, 0.1);
+    border-radius: 50%;
+}
+
+.shape-1 {
+    width: 120px;
+    height: 120px;
+    top: 15%;
+    left: 15%;
+    animation: float 12s ease-in-out infinite;
+}
+
+.shape-2 {
+    width: 80px;
+    height: 80px;
+    top: 25%;
+    right: 15%;
+    animation: float 15s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+.shape-3 {
+    width: 60px;
+    height: 60px;
+    bottom: 20%;
+    left: 20%;
+    animation: float 10s ease-in-out infinite;
+    animation-delay: 2s;
+}
+
+.shape-4 {
+    width: 150px;
+    height: 150px;
+    bottom: 15%;
+    right: 15%;
+    animation: float 18s ease-in-out infinite;
+    animation-delay: 3s;
+}
+
+/* Add additional shapes for more visual interest */
+.shape-5 {
+    width: 100px;
+    height: 100px;
+    top: 40%;
+    left: 10%;
+    animation: float 14s ease-in-out infinite;
+    animation-delay: 1.5s;
+    background-color: rgba(245, 185, 65, 0.1);
+}
+
+.shape-6 {
+    width: 70px;
+    height: 70px;
+    top: 30%;
+    right: 30%;
+    animation: float 16s ease-in-out infinite;
+    animation-delay: 2.5s;
+    background-color: rgba(245, 185, 65, 0.1);
+}
+
+/* Enhance hero title for better visual impact */
+.hero-title {
+    font-size: 5rem;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+/* Enhance hero description */
+.hero-description {
+    font-size: 1.3rem;
+    margin: 0 auto 3rem;
+    max-width: 80%;
+    line-height: 1.7;
+}
+
+/* Center CTA buttons */
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 4rem;
+    }
+    
+    .network-visual-enhanced {
+        width: 500px;
+        height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3.5rem;
+    }
+    
+    .hero-description {
+        font-size: 1.1rem;
+        max-width: 90%;
+    }
+    
+    .network-visual-enhanced {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 2.8rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .network-visual-enhanced {
+        width: 300px;
+        height: 300px;
+    }
+}

@@ -1,0 +1,145 @@
+/* Team section enhancements */
+.team {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Team slider container */
+.team-slider {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.team-slider-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 20px;
+    padding: 10px;
+}
+
+/* Team member card styling */
+.team-member {
+    flex: 0 0 100%;
+    max-width: calc(100% - 40px);
+    padding: 2rem;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+    margin: 10px;
+}
+
+/* For desktop, show multiple cards */
+@media (min-width: 768px) {
+    .team-member {
+        flex: 0 0 calc(50% - 40px);
+        max-width: calc(50% - 40px);
+    }
+}
+
+@media (min-width: 992px) {
+    .team-member {
+        flex: 0 0 calc(33.333% - 40px);
+        max-width: calc(33.333% - 40px);
+    }
+}
+
+/* Team navigation controls */
+.team-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.team-prev-btn, 
+.team-next-btn {
+    background: none;
+    border: none;
+    color: var(--text-white);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-prev-btn:hover, 
+.team-next-btn:hover {
+    background-color: var(--primary-gold);
+    color: var(--primary-dark);
+}
+
+.team-dots {
+    display: flex;
+    gap: 0.5rem;
+    margin: 0 1.5rem;
+}
+
+.team-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.team-dot.active {
+    background-color: var(--primary-gold);
+    transform: scale(1.2);
+}
+
+/* Enhanced team member card */
+.team-member {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    text-align: center;
+    transition: var(--transition-fast);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.member-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1.5rem;
+    border: 3px solid var(--primary-gold);
+    transition: var(--transition-fast);
+}
+
+.team-member:hover .member-image {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(245, 185, 65, 0.3);
+}
+
+/* Animation for slider */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.team-member.active {
+    animation: fadeIn 0.5s forwards;
+}
